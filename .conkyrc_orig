@@ -1,0 +1,37 @@
+gap_x 0			#odstęp lewa,prawa
+gap_y 4			#odstęp góra,dół
+own_window  yes		#ma tworzyć własne okno?
+own_window_transparent no	#przezroczystość okna
+own_window_type normal	#rodzaj okna?
+own_window_hints undecorate,sticky,below,skip_taskbar,skip_pager 
+draw_shades no		#czy rysować cienie?
+update_interval 1	#co ile ma odświeżać
+minimum_size 1600 0	#minimalny rozmiar
+use_spacer none
+double_buffer yes	#włączyć podwójne buforowanie?
+override_utf8_locale yes	#to potrzebne?
+use_xft yes		#wygładzanie czcionek
+#xftfont Terminus:size=10
+xftfont Sans:size=8
+alignment top_left	#pozycja conky na ekranie
+draw_borders no
+border_inner_margin 2
+xftalpha 1		#poziom przezroczystości wygładzanych czcionek
+#od 0 do 1. może być np. 0.9
+#border_margin 0
+#border_width 0
+#maximum_width 240	#maksymalna szerokość
+total_run_times 0	#by program pracował nieustannie wartość 0
+
+default_color  ffffff
+#default_shade_color 000000
+#own_window_colour 000000
+own_window_colour 0d3c44
+color2 2d9ac9
+color3 cc0033
+
+TEXT
+ UPTIME: ${uptime_short}   CPU: ${cpugraph cpu0 9,68 2d9ac9 2d9ac9}   HDD: ${diskiograph 9,68 2d9ac9 2d9ac9}  RAM: ${color2}${mem}${color}  SWAP: ${color2}${SWAP}${color}  WiFi:${color2}${wireless_link_qual_perc wlan0}% ${wireless_essid wlan0}${color}    GPU: ${color2}${hwmon temp 1}C${color}  CPU: ${color2}${hwmon temp 2}C${color}                  UP:   ${color2}${upspeed wlan0}${color}DOWN:${color2}${downspeed wlan0}   
+#EMAIL: ${color2}${execi 600 /usr/share/silnik/email.sh}${color}  UPDATES: ${color2}${execi 600 cat /usr/share/silnik/aptupwc}${color}  HIBERNATION: ${color2}${execi 600 /usr/share/silnik/ram_info.sh}  ${color}${execi 600 /usr/share/silnik/szkola.sh}                                     
+#${color}DISKIO: ${color2}${diskio /dev/sda}${color}  
+# ${hwmon temp 3}  ${hwmon temp 1}  ${hwmon temp 2}
