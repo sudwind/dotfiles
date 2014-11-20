@@ -1,0 +1,36 @@
+gap_x 0	
+gap_y 3	
+own_window  yes
+own_window_transparent no
+alignment top_left
+own_window_class Conky
+own_window_type panel # this will take a part of the top of your screen, change to normal/desktop if you don't want this
+own_window_hints undecorate,sticky,below,skip_taskbar,skip_pager # set skip_taskbar in case of own_window_type != panel
+draw_shades no
+update_interval 0.5	#laggy on older/non-powerful-enough cpus, set to 1 for 1 update per second
+#update_interval_on_battery 2	#2 sec on my Sammy notebook
+minimum_size 1920 0
+use_spacer none
+double_buffer yes
+override_utf8_locale yes
+use_xft yes
+#xftfont Terminus:size=10
+xftfont Sans:size=8
+draw_borders no
+border_inner_margin 1
+xftalpha 1
+#border_margin 0
+#border_width 0
+#maximum_width 240
+total_run_times 0
+
+default_color  ffffff
+#default_shade_color 000000
+#own_window_colour 000000
+own_window_colour 000000
+color2 2d9ac9
+color3 cc0033
+
+
+TEXT
+  UPTIME: ${uptime_short} ${tab 2} ${if_running audacious} ${audacious_title 70} 		${color}Currently ${audacious_status} ${endif}    HDD: ${diskiograph 9,68 2d9ac9 2d9ac9}  RAM: ${color2}${mem}${color}     CPU TEMP: ${color2}${hwmon 1 temp 1}Cº${color} ${alignc} CPU: ${cpugraph cpu0 9,68 2d9ac9 2d9ac9}  CORES: ${color2}${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}% ${color}           ${alignr} ${if_up wlp0s29u1u5} UP:  ${color2}${upspeed wlp0s29u1u5}${color}   	DOWN:   ${color2}${downspeed wlp0s29u1u5}${color} Wireless:${color2}${wireless_link_qual_perc wlp0s29u1u5}% ${color} on network: ${wireless_essid wlp0s29u1u5}${color} ${else}UP:   ${color2}${upspeed enp3s0}${color}DOWN:${color2}${downspeed enp3s0}${endif}  Vol: ${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6}    ${time   %A %d} de ${time %B} de ${time %Y} -- ${time %T}
