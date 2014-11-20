@@ -1,0 +1,19 @@
+##Disable DPMS
+xset -dpms; xset s off &
+
+(sleep 1s && compton --config ~/.config/compton.conf -b) &
+
+xset m 0 0
+
+(sleep 1s && volumeicon) &
+
+##Background
+(sleep 1s && nitrogen --restore) &
+
+(sleep 1s && plank) &
+
+##Sound Icon
+(sleep 1s && volumeicon) &
+
+##Conky
+(sleep 3s && conky --daemonize) &

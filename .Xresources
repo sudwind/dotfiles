@@ -1,0 +1,23 @@
+URxvt.perl-ext-common: default,matcher,tabbedex,selection-to-clipboard
+URxvt.depth: 32
+URxvt.background: [65]#FFFFFF
+
+
+URxvt.scrollstyle: next
+
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+URxvt.font: xft:sans:size=10
+URxvt.url-launcher: /usr/bin/google-chrome-beta
+URxvt.matcher.button: 1
+URxvt.colorUL: #4682B4
+URxvt.letterSpace: -5
+URxvt.keysym.Control-Shift-Left: perl:tabbedex:move_tab_left
+URxvt.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
+URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
+URxvt.keysym.Control-t: perl:tabbedex:new_tab
+URxvt.keysym.Control-Left: perl:tabbedex:next_tab
+URxvt.keysym.Control-Right: perl:tabbedex:prev_tab
+
+
